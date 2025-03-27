@@ -8,11 +8,7 @@ export const addtimetable = asyerrohander(
     async(req,res,next)=>{
          const passcouser = req.body;
     
-        // const user = await addcousedb(passcouser);
-      ///  const newOrders = (await new timetable(req.body).save()).toObject();
-        // const token = jwt.sign({id:newOrders._id,role :newOrders.usertype},process.env.SECTRE_TOKEN,{
-        //      expiresIn : process.env.EXPIRE_Y 
-        // })
+    
        const addsucess = await savetimetable(passcouser)
           return makerespon({ res, data: addsucess, message: "time table coures successfully" });
       }
